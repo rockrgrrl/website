@@ -93,10 +93,12 @@ header {
 .tagline-line-one {
   background: #F0C808;
   color: #FCFCFF;
+  text-align: center;
 }
 
 .tagline-line-two {
   color: #F0C808;
+  font-family: NotoSansSemiBold;
 }
 
 .about-block {
