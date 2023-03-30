@@ -84,7 +84,7 @@ header {
 .hero-tagline {
   display: flex;
   flex-direction: column;
-  font-size: min(4vw, 40px);
+  font-size: min(6vw, 40px);
   font-family: NotoSansThin;
   margin: 15px auto auto;
   padding: 10px;
