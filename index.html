@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gina Krieb - Senior Software Engineer specializing in full-stack development, system architecture, and building thoughtful solutions.">
+    <meta name="description" content="Senior Software Engineer specializing in database performance, full-stack architecture, and high-traffic systems. Based in Portland, OR.">
     <meta name="author" content="Gina Krieb">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>Gina Krieb - Senior Software Engineer</title>
@@ -105,6 +104,7 @@
         section:nth-child(3) { animation-delay: 0.4s; }
         section:nth-child(4) { animation-delay: 0.5s; }
         section:nth-child(5) { animation-delay: 0.6s; }
+        section:nth-child(6) { animation-delay: 0.7s; }
 
         h2 {
             font-family: var(--mono);
@@ -153,6 +153,37 @@
         .skill-category span {
             color: var(--text-secondary);
             font-size: 12px;
+        }
+
+        /* Featured Work section */
+        .impact-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .impact-list li {
+            font-family: var(--sans);
+            font-size: 17px;
+            color: var(--primary);
+            padding-left: 20px;
+            position: relative;
+            line-height: 1.5;
+        }
+
+        .impact-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-family: var(--mono);
+            font-size: 14px;
+            top: 2px;
+        }
+
+        .impact-list strong {
+            color: var(--primary);
         }
 
         .links {
@@ -310,7 +341,7 @@
 
         <section class="about">
             <h2>About</h2>
-            <p>I'm a senior software engineer. I've been a carpenter and a teacher before this, which taught me a lot about building things and communicating complex ideas. I think the best code is written with empathy—for the people who'll use it and the engineers who'll work with it down the line.</p>
+            <p>I'm a senior software engineer. I've been a carpenter and a teacher before this, which taught me a lot about building things and communicating complex ideas. I think the best code is written with empathy - for the people who'll use it and the engineers who'll work with it down the line.</p>
             <p>I live in Portland, Oregon with my wife and our cats. When I'm not working, I'm usually reading, exploring trails, working on DIY projects, or trying to improve my baking skills. I'm also a passionate advocate for animal rights.</p>
         </section>
 
@@ -323,11 +354,11 @@
                 </div>
                 <div class="skill-category">
                     <strong>Architecture & Performance</strong>
-                    <span>Building systems that make sense and work well</span>
+                    <span>Diagnosing problems at the data layer - schema design, query architecture, and knowing when the real fix isn't in the code</span>
                 </div>
                 <div class="skill-category">
-                    <strong>Solve Problems</strong>
-                    <span>The gnarly ones that need creative thinking</span>
+                    <strong>Database & Systems Performance</strong>
+                    <span>Solving bottlenecks at the schema level - where query architecture and data modeling decisions actually live</span>
                 </div>
                 <div class="skill-category">
                     <strong>Lead with Empathy</strong>
@@ -336,9 +367,18 @@
             </div>
         </section>
 
+        <section class="impact">
+            <h2>Featured Work</h2>
+            <ul class="impact-list">
+                <li>Architected a denormalized read model for a high-traffic student product catalog, delivering <strong>14-25x query performance gains</strong> and eliminating N+1 patterns across the system.</li>
+                <li>Orchestrated a <strong>Kubernetes-based backfill of 2.5M+ records</strong>, scaling from 100 to 100,000 per job with stable database metrics throughout.</li>
+                <li>Led an SSO initiative that secured contract renewal for a client's <strong>largest customer - 565,000+ students</strong>.</li>
+            </ul>
+        </section>
+
         <section class="values">
             <h2>How I Work</h2>
-            <p>I focus on solving real user problems while being honest about the technical tradeoffs involved. I help teams move quickly by surfacing risks early and designing for flexibility rather than trying to predict the future. Once we decide on a direction, I commit fully to shipping something great.</p>
+            <p>I focus on solving real user problems while being honest about the technical tradeoffs involved. I help teams move quickly by surfacing risks early and designing for flexibility rather than trying to predict the future. Once a direction is chosen, I drive it forward with focus and accountability, helping teams ship high-quality, durable outcomes.</p>
         </section>
 
         <section class="connect">
@@ -354,3 +394,7 @@
 
         <footer>
             © 2026 Gina Krieb
+        </footer>
+    </div>
+</body>
+</html>
