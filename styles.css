@@ -9,7 +9,7 @@
     --text-primary: #1a1a1a;
     --text-secondary: #333333;
     --text-muted: #666666;
-    --text-faint: #999999;
+    --text-faint: #767676;
     --border: #eeece8;
     --mono: 'Space Mono', monospace;
     --sans: 'Plus Jakarta Sans', sans-serif;
@@ -62,7 +62,7 @@ body {
 .nav a {
     font-family: var(--mono);
     font-size: 10px;
-    color: #aaa;
+    color: #595959;
     text-decoration: none;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -226,8 +226,8 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #bbb;
-    margin-bottom: 28px;
+    color: #595959;
+    margin-bottom: 40px;
     display: flex;
     align-items: center;
     gap: 16px;
@@ -285,7 +285,7 @@ body {
 .strength-num {
     font-family: var(--mono);
     font-size: 10px;
-    color: #ccc;
+    color: #767676;
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 14px;
@@ -388,7 +388,7 @@ body {
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #aaa;
+    color: #595959;
     margin-bottom: 20px;
     display: block;
 }
@@ -418,7 +418,7 @@ body {
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #aaa;
+    color: #595959;
     margin-bottom: 8px;
 }
 
@@ -441,7 +441,7 @@ body {
 .footer {
     font-family: var(--mono);
     font-size: 10px;
-    color: #bbb;
+    color: #595959;
     text-align: center;
     padding: 24px 0 0;
 }
