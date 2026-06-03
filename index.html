@@ -3,398 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Senior Software Engineer specializing in database performance, full-stack architecture, and high-traffic systems. Based in Portland, OR.">
+    <meta name="description" content="Senior Software Engineer specializing in database architecture, full-stack development, and AI tooling. Based in Portland, OR.">
     <meta name="author" content="Gina Krieb">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <title>Gina Krieb - Senior Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #1a1a1a;
-            --background: #fafaf8;
-            --accent: #0d9488;
-            --text-secondary: #595959;
-            --mono: 'Space Mono', monospace;
-            --sans: 'DM Sans', sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--sans);
-            background: var(--background);
-            color: var(--primary);
-            line-height: 1.6;
-            font-size: 18px;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 80px 24px;
-            animation: fadeIn 0.8s ease-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        header {
-            margin-bottom: 80px;
-            animation: slideDown 0.8s ease-out 0.2s backwards;
-        }
-
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        h1 {
-            font-family: var(--mono);
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 16px;
-            color: var(--accent);
-        }
-
-        .title {
-            font-family: var(--sans);
-            font-size: 48px;
-            font-weight: 500;
-            line-height: 1.2;
-            margin-bottom: 24px;
-            letter-spacing: -0.5px;
-        }
-
-        .subtitle {
-            font-family: var(--mono);
-            font-size: 14px;
-            color: var(--text-secondary);
-            letter-spacing: 0.5px;
-        }
-
-        section {
-            margin-bottom: 60px;
-            animation: fadeIn 0.8s ease-out backwards;
-        }
-
-        section:nth-child(2) { animation-delay: 0.3s; }
-        section:nth-child(3) { animation-delay: 0.4s; }
-        section:nth-child(4) { animation-delay: 0.5s; }
-        section:nth-child(5) { animation-delay: 0.6s; }
-        section:nth-child(6) { animation-delay: 0.7s; }
-
-        h2 {
-            font-family: var(--mono);
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 24px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .about p {
-            font-family: var(--sans);
-            margin-bottom: 16px;
-            font-size: 18px;
-            color: var(--primary);
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-        }
-
-        .skill-category {
-            font-family: var(--mono);
-            font-size: 13px;
-            padding: 12px 16px;
-            background: white;
-            border: 1px solid #e0e0e0;
-            transition: all 0.2s ease;
-        }
-
-        .skill-category:hover {
-            border-color: var(--accent);
-            transform: translateX(4px);
-        }
-
-        .skill-category strong {
-            display: block;
-            margin-bottom: 6px;
-            color: var(--primary);
-        }
-
-        .skill-category span {
-            color: var(--text-secondary);
-            font-size: 12px;
-        }
-
-        /* Featured Work section */
-        .impact-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .impact-list li {
-            font-family: var(--sans);
-            font-size: 17px;
-            color: var(--primary);
-            padding-left: 20px;
-            position: relative;
-            line-height: 1.5;
-        }
-
-        .impact-list li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-family: var(--mono);
-            font-size: 14px;
-            top: 2px;
-        }
-
-        .impact-list strong {
-            color: var(--primary);
-        }
-
-        .links {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 24px;
-        }
-
-        a {
-            font-family: var(--mono);
-            font-size: 13px;
-            color: var(--primary);
-            text-decoration: none;
-            position: relative;
-            transition: color 0.2s ease;
-        }
-
-        a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--accent);
-            transition: width 0.3s ease;
-        }
-
-        a:hover {
-            color: var(--accent);
-        }
-
-        a:hover::after {
-            width: 100%;
-        }
-
-        a:focus {
-            outline: 2px solid var(--accent);
-            outline-offset: 4px;
-        }
-
-        a:focus:not(:focus-visible) {
-            outline: none;
-        }
-
-        a:focus-visible {
-            outline: 2px solid var(--accent);
-            outline-offset: 4px;
-        }
-
-        .download-btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: var(--primary);
-            color: var(--background);
-            border: none;
-            font-family: var(--mono);
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            margin-top: 8px;
-        }
-
-        .download-btn::after {
-            display: none;
-        }
-
-        .download-btn:hover {
-            background: var(--accent);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .download-btn:focus {
-            outline: 2px solid var(--accent);
-            outline-offset: 4px;
-        }
-
-        .download-btn:focus-visible {
-            outline: 2px solid var(--accent);
-            outline-offset: 4px;
-        }
-
-        footer {
-            margin-top: 120px;
-            padding-top: 24px;
-            border-top: 1px solid #ddd;
-            font-family: var(--mono);
-            font-size: 11px;
-            color: var(--text-secondary);
-            text-align: center;
-        }
-
-        @media (max-width: 640px) {
-            .container {
-                padding: 48px 20px;
-            }
-
-            .title {
-                font-size: 36px;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .links {
-                flex-direction: column;
-                gap: 16px;
-            }
-        }
-
-        /* Decorative elements */
-        .accent-line {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, var(--accent) 0%, transparent 100%);
-            z-index: 1000;
-        }
-
-        /* Skip link for screen readers */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--primary);
-            color: var(--background);
-            padding: 8px 16px;
-            text-decoration: none;
-            font-family: var(--mono);
-            font-size: 14px;
-            z-index: 2000;
-        }
-
-        .skip-link:focus {
-            top: 0;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <div class="accent-line"></div>
-    
-    <div class="container" id="main-content" role="main">
-        <header>
-            <h1>Gina Krieb</h1>
-            <div class="title">Senior Software Engineer</div>
-            <div class="subtitle">reader • baker • explorer • builder</div>
-        </header>
 
-        <section class="about">
-            <h2>About</h2>
+    <div class="container" id="main-content">
+
+        <nav class="nav" aria-label="Main navigation">
+            <a href="#work">work</a>
+            <a href="#projects">projects</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+        <section class="hero" aria-label="Introduction">
+            <div class="hero-eyebrow">Senior Software Engineer &middot; Portland, OR</div>
+            <div class="hero-name">
+                <span class="hero-name-line1">Gina</span>
+                <span class="hero-name-line2">Krieb</span>
+            </div>
+            <div class="hero-highlights">
+                <span class="hl hl-yellow">reader</span>
+                <span class="hl hl-green">baker</span>
+                <span class="hl hl-purple">explorer</span>
+                <span class="hl hl-pink">tinkerer</span>
+            </div>
+            <div class="hero-cta">
+                <a href="gina-krieb-resume.pdf" class="btn-primary" download aria-label="Download resume">Resume</a>
+                <a href="#projects" class="btn-soft">Projects</a>
+            </div>
+        </section>
+
+        <div class="metrics" aria-label="Impact metrics">
+            <div class="metric">
+                <div class="metric-num">25<span>x</span></div>
+                <div class="metric-label">query performance gain via schema redesign</div>
+            </div>
+            <div class="metric">
+                <div class="metric-num">2.5<span>M</span></div>
+                <div class="metric-label">records backfilled via Kubernetes orchestration</div>
+            </div>
+            <div class="metric">
+                <div class="metric-num">565<span>K</span></div>
+                <div class="metric-label">students on SSO initiative that secured renewal</div>
+            </div>
+        </div>
+
+        <section class="about" aria-labelledby="about-heading">
+            <h2 id="about-heading" class="section-label">About</h2>
             <p>I'm a senior software engineer. I've been a carpenter and a teacher before this, which taught me a lot about building things and communicating complex ideas. I think the best code is written with empathy - for the people who'll use it and the engineers who'll work with it down the line.</p>
             <p>I live in Portland, Oregon with my wife and our cats. When I'm not working, I'm usually reading, exploring trails, working on DIY projects, or trying to improve my baking skills. I'm also a passionate advocate for animal rights.</p>
         </section>
 
-        <section class="expertise">
-            <h2>What I Do</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <strong>Full-Stack Development</strong>
-                    <span>From dashboards to APIs</span>
+        <section class="strengths" id="work" aria-labelledby="strengths-heading">
+            <h2 id="strengths-heading" class="section-label">What I do</h2>
+            <div class="strength-grid">
+                <div class="strength-card strength-card--purple">
+                    <div class="strength-num">01</div>
+                    <div class="strength-title">Database architecture</div>
+                    <p class="strength-desc">Schema design, denormalization, query planning. I find and fix problems at the data layer.</p>
                 </div>
-                <div class="skill-category">
-                    <strong>Architecture & Performance</strong>
-                    <span>Diagnosing problems at the data layer - schema design, query architecture, and knowing when the real fix isn't in the code</span>
+                <div class="strength-card strength-card--amber">
+                    <div class="strength-num">02</div>
+                    <div class="strength-title">Full-stack development</div>
+                    <p class="strength-desc">Rails, React, PostgreSQL. Backend-focused and comfortable across the stack.</p>
                 </div>
-                <div class="skill-category">
-                    <strong>Database & Systems Performance</strong>
-                    <span>Solving bottlenecks at the schema level - where query architecture and data modeling decisions actually live</span>
+                <div class="strength-card strength-card--green">
+                    <div class="strength-num">03</div>
+                    <div class="strength-title">Systems thinking</div>
+                    <p class="strength-desc">I think in tradeoffs before solutions. Surface risks early, design for flexibility, drive decisions forward with clarity.</p>
                 </div>
-                <div class="skill-category">
-                    <strong>Lead with Empathy</strong>
-                    <span>Code reviews, mentoring, collaboration</span>
+                <div class="strength-card strength-card--pink">
+                    <div class="strength-num">04</div>
+                    <div class="strength-title">AI and LLM tooling</div>
+                    <p class="strength-desc">Building with LLMs at an engineering level. Prompt design, structured output, evaluation.</p>
                 </div>
             </div>
         </section>
 
-        <section class="impact">
-            <h2>Featured Work</h2>
-            <ul class="impact-list">
-                <li>Architected a denormalized read model for a high-traffic student product catalog, delivering <strong>14-25x query performance gains</strong> and eliminating N+1 patterns across the system.</li>
-                <li>Orchestrated a <strong>Kubernetes-based backfill of 2.5M+ records</strong>, scaling from 100 to 100,000 per job with stable database metrics throughout.</li>
-                <li>Led an SSO initiative that secured contract renewal for a client's <strong>largest customer - 565,000+ students</strong>.</li>
-            </ul>
-        </section>
-
-        <section class="values">
-            <h2>How I Work</h2>
-            <p>I focus on solving real user problems while being honest about the technical tradeoffs involved. I help teams move quickly by surfacing risks early and designing for flexibility rather than trying to predict the future. Once a direction is chosen, I drive it forward with focus and accountability, helping teams ship high-quality, durable outcomes.</p>
-        </section>
-
-        <section class="connect">
-            <h2>Let's Connect</h2>
-            <div class="links">
-                <a href="mailto:ginakrieb@gmail.com" aria-label="Send me an email">Email</a>
-                <a href="https://linkedin.com/in/ginakrieb" target="_blank" rel="noopener noreferrer" aria-label="View my LinkedIn profile">LinkedIn</a>
-                <a href="https://github.com/rockrgrrl" target="_blank" rel="noopener noreferrer" aria-label="View my GitHub profile">GitHub</a>
+        <section class="projects" id="projects" aria-labelledby="projects-heading">
+            <h2 id="projects-heading" class="section-label">Projects</h2>
+            <div class="project-card">
+                <div class="project-info">
+                    <div class="project-name">EXPLAIN Analyzer</div>
+                    <p class="project-desc">Analyzes PostgreSQL EXPLAIN ANALYZE output and returns structured performance findings with clear explanations and actionable recommendations. Built with FastAPI and Python, powered by Claude.</p>
+                    <div class="tag-row">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">LLM</span>
+                        <span class="tech-tag">Pydantic</span>
+                    </div>
+                </div>
+                <div class="project-links">
+                    <a href="https://explain-analyzer.onrender.com" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="EXPLAIN Analyzer live demo">live demo</a>
+                    <a href="https://github.com/rockrgrrl/explain-analyzer" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="EXPLAIN Analyzer GitHub">github</a>
+                </div>
             </div>
-            <br>
-            <a href="gina-krieb-resume.pdf" class="download-btn" download aria-label="Download my resume as PDF">Resume</a>
         </section>
 
-        <footer>
-            © 2026 Gina Krieb
+        <section class="connect" id="contact" aria-labelledby="connect-heading">
+            <h2 id="connect-heading" class="connect-eyebrow">Get in touch</h2>
+            <div class="connect-headline">Let's build something <em>worth building.</em></div>
+            <div class="connect-grid">
+                <div class="connect-item">
+                    <div class="connect-item-label">Email</div>
+                    <a href="mailto:ginakrieb@gmail.com" class="connect-item-value">ginakrieb@gmail.com</a>
+                </div>
+                <div class="connect-item">
+                    <div class="connect-item-label">LinkedIn</div>
+                    <a href="https://linkedin.com/in/ginakrieb" target="_blank" rel="noopener noreferrer" class="connect-item-value">in/ginakrieb</a>
+                </div>
+                <div class="connect-item">
+                    <div class="connect-item-label">GitHub</div>
+                    <a href="https://github.com/rockrgrrl" target="_blank" rel="noopener noreferrer" class="connect-item-value">rockrgrrl</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            &copy; 2026 Gina Krieb &middot; Portland, OR
         </footer>
+
     </div>
 </body>
 </html>
